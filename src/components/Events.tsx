@@ -38,8 +38,8 @@ export function Events() {
     };
 
     return (
-        <section id="events" className="px-4 group">
-            <div className="mb-6">
+        <section id="events" className="px-4">
+            <div className="mb-6 group">
                 <div className="relative">
                     <div className="flex items-center gap-3">
                         <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/20 group-hover:scale-110 transition-transform duration-200">
@@ -60,7 +60,7 @@ export function Events() {
                 </div>
             ) : (
                 <Card className="p-0 transition-all duration-300 hover:shadow-lg">
-                    <CardContent className="p-4">
+                    <CardContent className="p-4 group">
                         <div className="space-y-4">
                             {sortedYears.map((year) => {
                                 const yearStatus = getYearStatus(year);

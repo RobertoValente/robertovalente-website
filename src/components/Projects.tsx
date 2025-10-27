@@ -45,8 +45,8 @@ export function Projects() {
 	};
 
 	return (
-		<section id="projects" className="px-4 group">
-			<div className="mb-6">
+		<section id="projects" className="px-4">
+			<div className="mb-6 group">
 				<div className="relative">
 					<div className="flex items-center gap-3">
 						<div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/20 group-hover:scale-110 transition-transform duration-200">
@@ -69,7 +69,7 @@ export function Projects() {
                 ) : (
                     (projectsData.projects.map((project, idx) => (
                         <Card key={idx} className="transition-all duration-300 hover:shadow-lg group">
-                            <CardContent className="px-6">
+                            <CardContent className="px-6 group">
                                 <div className="flex flex-col gap-2">
                                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                                         <div className="flex items-center gap-2">

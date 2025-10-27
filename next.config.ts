@@ -1,6 +1,5 @@
 import type { NextConfig } from "next";
-import { envSchema } from "@/lib/utils";
-import { ZodError } from "zod";
+import { z, ZodError } from "zod";
 
 const nextConfig: NextConfig = {
     /* config options here */
@@ -23,7 +22,9 @@ const nextConfig: NextConfig = {
 };
 
 try {
-    envSchema.parse(process.env);
+    z.object({
+        NEXT_PUBLIC_SITE_URL: z.string().min(1),
+    });
 } catch (error: unknown) {
     if (error instanceof ZodError) {
         error.errors.forEach((err) => {
