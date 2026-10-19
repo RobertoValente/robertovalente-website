@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "standalone",
   cacheComponents: true,
+  experimental: { inlineCss: true },
   partialPrefetching: true,
   reactCompiler: true,
   turbopack: {
