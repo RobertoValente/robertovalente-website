@@ -12,6 +12,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Valey",
+    status: "active",
+    description: {
+      pt: "estúdio pequeno que constrói produtos próprios para resolver problemas reais",
+      en: "small studio that builds its own products to solve real problems",
+    },
+    site: "https://valey.pt",
+  },
+  {
     name: "Browski",
     status: "active",
     description: {
