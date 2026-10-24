@@ -25,16 +25,14 @@ Post body in Markdown.
 
 ```bash
 npm install
-npm run db:migrate   # creates the tables in DATABASE_URL
 npm run dev
 ```
+
+The contact form needs rv-api running (locally on port 8000).
 
 ## Environment
 
 | Variable | Purpose |
 | --- | --- |
-| `DATABASE_URL` | Postgres connection string (password percent-encoded) |
-| `RESEND_API_KEY` | Resend API key, for contact notifications |
-| `EMAIL_FROM` | Sender address, on a domain verified in Resend |
-
-`npm run build` applies the schema before building. The Docker image applies it on start.
+| `RV_API_URL` | Base URL of [rv-api](https://github.com/RobertoValente/rv-api), which saves the submissions and sends the emails |
+| `RV_API_KEY` | This site's rv-api key (server-only) |
