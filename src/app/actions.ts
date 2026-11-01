@@ -21,7 +21,7 @@ export async function sendMessage(_prev: ContactState, data: FormData): Promise<
   // rv-api rate limits, saves the message and emails it.
   try {
     const message = { ...input, lang: hasLocale(lang) ? lang : "pt" };
-    const { status, code } = await rvApi("/website/messages", { method: "POST", body: message, forwardIp: true });
+    const { status, code } = await rvApi("/integrations/website/messages", { method: "POST", body: message, forwardIp: true });
     if (!status && code === "RATE_LIMITED") return { status: "error", error: "rateLimit" };
     if (!status) throw new Error(code);
   } catch (error) {
